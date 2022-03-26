@@ -1,0 +1,38 @@
+@model IEnumerable<Actividad4.Models.UserModel>;
+
+@{
+    ViewData["Title"] = "Actividad 4";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Actividad MVC</h1>
+    <table class="table table">
+        <tr>
+            <td>
+                Id
+            </td>
+            <td>
+                Nombre
+            </td>
+            <td>
+                Rol
+            </td>
+        </tr>
+    @foreach (var item in Model)
+    {
+         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rol)
+            </td>
+        </tr>
+    }
+    </table>
+       
+    
+</div>
